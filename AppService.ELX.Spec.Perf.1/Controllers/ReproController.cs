@@ -13,7 +13,7 @@ namespace AppService.ELX.Spec.Perf._1.Controllers
         public async Task<String> Index()
         {
             HttpClient c = client.Value;
-            HttpResponseMessage response = await c.GetAsync("http://juzhudelay.azurewebsites.net/Delay?seconds=20");
+            HttpResponseMessage response = await c.GetAsync("https://juzhudelay.azurewebsites.net/Delay?seconds=20");
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
 
